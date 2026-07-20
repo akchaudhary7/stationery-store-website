@@ -7,6 +7,8 @@ import ink_pen1 from '../assets/ink_pen1.png'
 import pens from '../assets/pens.png'
 import product1 from '../assets/product1.png'
 import shelve1 from '../assets/shelve1.png'
+import logo from '../assets/logo.png'
+import logo1 from '../assets/logo1.png'
 
 
 
@@ -19,7 +21,9 @@ export const assets = {
     ink_pen1,
     pens,
     product1,
-    shelve1
+    shelve1,
+    logo,
+    logo1
 }
 
 export const products = [
