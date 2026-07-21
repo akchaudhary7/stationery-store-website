@@ -4,3 +4,7 @@
 a.active hr{
     display: block;
 }
+
+@theme{
+    --breakpoint-ak: 830px
+}
