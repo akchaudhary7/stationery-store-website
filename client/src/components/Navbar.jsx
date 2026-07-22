@@ -3,17 +3,18 @@ import { NavLink, Link } from 'react-router-dom'
 import { IoCartOutline } from "react-icons/io5";
 import { CiUser } from "react-icons/ci";
 import { IoMdMenu, IoIosArrowBack } from "react-icons/io";
+import { assets } from '../assets/assets';
 
 const Navbar = () => {
 
   const [visible, setVisible] = useState(false);
 
   return (
-    <header className='px-16'>
-      <nav className='flex items-center justify-between px-12 h-16 lg:gap-8'>
-        <NavLink to='/' className='text-2xl font-bold whitespace-nowrap'>Stationery Store</NavLink>
+    <header className=''>
+      <nav className='flex items-center justify-between px-2 md:px-6 ak:px-16 h-16 lg:gap-8'>
+        <NavLink to='/' className='text-xl md:text-2xl font-bold whitespace-nowrap'>Stationery Store</NavLink>
         <div className=''>
-          <ul className='hidden ak:flex flex gap-6 text-lg items-center '>
+          <ul className='hidden ak:flex gap-6 text-lg items-center '>
             <NavLink to='/' className='hover:underline'>
               <p> Home </p>
               {/* <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' /> */}
@@ -51,7 +52,8 @@ const Navbar = () => {
             <IoCartOutline className='size-5' />
             <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px] '>10</p>
           </Link>
-            <i onClick={() => setVisible(true)} className='ak:hidden' class="fa-solid fa-bars cursor-pointer"></i>
+            {/* <i onClick={() => setVisible(true)} className='ak:hidden' class="fa-solid fa-bars cursor-pointer"></i> */}
+            <img onClick={()=> setVisible(true)} className='ak:hidden w-5 cursor-pointer' src={assets.menu_icon} alt="" />
 
         </div>
 

@@ -9,6 +9,7 @@ import product1 from '../assets/product1.png'
 import shelve1 from '../assets/shelve1.png'
 import logo from '../assets/logo.png'
 import logo1 from '../assets/logo1.png'
+import menu_icon from '../assets/menu_icon.png'
 
 
 
@@ -23,7 +24,8 @@ export const assets = {
     product1,
     shelve1,
     logo,
-    logo1
+    logo1,
+    menu_icon
 }
 
 export const products = [
