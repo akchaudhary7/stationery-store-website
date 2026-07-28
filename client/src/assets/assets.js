@@ -10,6 +10,9 @@ import shelve1 from '../assets/shelve1.png'
 import logo from '../assets/logo.png'
 import logo1 from '../assets/logo1.png'
 import menu_icon from '../assets/menu_icon.png'
+import banner from '../assets/banner.avif'
+import banner2 from '../assets/banner2.jpg'
+import banner3 from '../assets/banner3.jpeg'
 
 
 
@@ -25,7 +28,10 @@ export const assets = {
     shelve1,
     logo,
     logo1,
-    menu_icon
+    menu_icon,
+    banner,
+    banner2,
+    banner3
 }
 
 export const products = [

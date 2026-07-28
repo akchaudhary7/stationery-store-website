@@ -1,10 +1,44 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 
-a.active hr{
-    display: block;
-}
+
 
 @theme{
     --breakpoint-ak: 830px
+}
+
+*{
+    font-family: Outfit;
+}
+
+
+.quicksand-main {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*   
+    body {
+      font-family: "Quicksand", sans-serif;
+      margin: 0;
+    }
+   */
+
+
+@keyframes slideFade {
+  from {
+    opacity: 0.25;
+    transform: scale(1.015);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-fade {
+  animation: slideFade 500ms ease-in-out;
 }

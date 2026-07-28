@@ -3,6 +3,8 @@ import { NavLink, Link } from 'react-router-dom'
 import { IoCartOutline } from "react-icons/io5";
 import { CiUser } from "react-icons/ci";
 import { IoMdMenu, IoIosArrowBack } from "react-icons/io";
+import { BiMenuAltRight } from "react-icons/bi";
+
 import { assets } from '../assets/assets';
 
 const Navbar = () => {
@@ -53,7 +55,12 @@ const Navbar = () => {
             <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px] '>10</p>
           </Link>
             {/* <i onClick={() => setVisible(true)} className='ak:hidden' class="fa-solid fa-bars cursor-pointer"></i> */}
-            <img onClick={()=> setVisible(true)} className='ak:hidden w-5 cursor-pointer' src={assets.menu_icon} alt="" />
+            {/* <img onClick={()=> setVisible(true)} className='ak:hidden w-5 cursor-pointer' src={assets.menu_icon} alt="" /> */}
+            <button onClick={()=> setVisible(true)} >
+
+              <BiMenuAltRight className='ak:hidden w-5 cursor-pointer'/>
+              </button>
+
 
         </div>
 
