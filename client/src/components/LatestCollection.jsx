@@ -10,7 +10,7 @@ const LatestCollection = () => {
     const [latestProducts, setLatestProducts] = useState([]);
 
     useEffect(() => {
-        setLatestProducts(products.slice(0, 8));
+        setLatestProducts(products.slice(0, 12));
     }, [products])
 
 
@@ -26,15 +26,20 @@ const LatestCollection = () => {
 
             {/* Rendering Products */}
 
-            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
-                {latestProducts.map((item) => (
-                    <Item
+            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 ak:grid-cols-5 lg:grid-cols-6 gap-4 gap-y-6'>
+                {latestProducts.slice(0,12).map((item, index) => (
+                    <div
                         key={item._id}
-                        id={item._id}
-                        image={item.image[0]}
-                        name={item.name}
-                        price={item.price}
-                    />
+                        className={index >= 6 ? 'hidden lg:block' : ''}
+                    >
+                        <Item
+                            key={item._id}
+                            id={item._id}
+                            image={item.image[0]}
+                            name={item.name}
+                            price={item.price}
+                        />
+                    </div>
                 ))}
             </div>
 

@@ -65,7 +65,7 @@ const Navbar = () => {
         </div>
 
               {/* Sidebar menu for small screen */}
-                <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible? 'w-full' : 'w-0'}`}>
+                <div className={`fixed h-[100vh] top-0 right-0 bottom-0 z-10 overflow-hidden bg-white transition-all ${visible? 'w-full' : 'w-0'}`}>
                     <div className='flex flex-col text-gray-600'>
                       <div onClick={()=>setVisible(false)} className='flex items-center gap-4 p-3 cursor-pointer'>
                         <IoIosArrowBack  />

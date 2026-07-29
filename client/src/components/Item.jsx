@@ -21,7 +21,7 @@ const Item = ({ id, image, name, price }) => {
                     <img
                         src={image}
                         alt={name}
-                        className="h-full w-full object-contain p-3"
+                        className="h-full w-full object-contain p-3 hover:scale-110 transition ease-in-out"
                     />
                 </div>
 
@@ -31,7 +31,7 @@ const Item = ({ id, image, name, price }) => {
                 </h3>
 
                 {/* Single product price */}
-                <p className="mt-3 text-[19px] font-bold text-red-500 sm:text-[19px] ">
+                <p className="mt-3  text-[19px] font-bold text-[rgb(219,68,68)]  ">
                     {currency} {price}
                 </p>
 
@@ -39,7 +39,7 @@ const Item = ({ id, image, name, price }) => {
                 <button
                     type="button"
                     onClick={handleAddToCart}
-                    className="mt-3 flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-amber-200 to-amber-400  py-2 text-[19px] font-bold text-black transition hover:brightness-95"
+                    className="mt-3 flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-amber-200 to-amber-300 py-1 md:py-1 ak:py-1.5 text-[15px] ak:text-[19px] font-bold text-black transition hover:brightness-95 hover:scale-110 transition ease-in-out"
                 >
                     {/* Cart icon */}
                     <IoCartOutline className='' />

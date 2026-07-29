@@ -83,7 +83,7 @@ export const products = [
         category: "Writing",
         subCategory: 'pencil',
         date: "07282026",
-        bestSeller: false
+        bestSeller: true
     },
     {
         _id: "eee",
@@ -154,5 +154,16 @@ export const products = [
         subCategory: 'pencil',
         date: "07282026",
         bestSeller: false
-    }
+    },
+    {
+        _id: "aaaaa",
+        name: "Pen",
+        price: 100,
+        image: [penbg],
+        category: "Writing",
+        subCategory: "pen",
+        date: "07182026",
+        bestSeller: true
+
+    },
 ]

@@ -94,7 +94,7 @@ const Hero = () => {
                     <button
                         onClick={goToPrevious}
                         aria-label="Previous slide"
-                        className="absolute left-3 sm:left-5 z-10 top-1/2 -translate-y-1/2 grid h-9 w-9 sm:h-[50px] sm:w-[50px] place-items-center rounded-full bg-slate-700/80 text-white transition hover:bg-slate-800"
+                        className="absolute left-3 sm:left-5 z-1 top-1/2 -translate-y-1/2 grid h-9 w-9 sm:h-[50px] sm:w-[50px] place-items-center rounded-full bg-slate-700/80 text-white transition hover:bg-slate-800"
                     >
                         <HiChevronLeft className="h-6 w-6 sm:h-8 sm:w-8" size={32} strokeWidth={1} />
                     </button>
@@ -103,7 +103,7 @@ const Hero = () => {
                     <button
                         onClick={goToNext}
                         aria-label="Next slide"
-                        className="absolute right-3 sm:right-5 z-10 top-1/2 -translate-y-1/2 grid h-9 w-9 sm:h-[50px] sm:w-[50px] place-items-center rounded-full bg-slate-700/80 text-white transition hover:bg-slate-800"
+                        className="absolute right-3 sm:right-5 z-1 top-1/2 -translate-y-1/2 grid h-9 w-9 sm:h-[50px] sm:w-[50px] place-items-center rounded-full bg-slate-700/80 text-white transition hover:bg-slate-800"
                     >
                         <HiChevronRight className="h-6 w-6 sm:h-8 sm:w-8" size={32} strokeWidth={1} />
                     </button>
@@ -123,7 +123,7 @@ const Hero = () => {
                         ))}
                     </div> */}
 
-                    <div className="absolute bottom-4 sm:bottom-6 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 sm:gap-3 rounded-full bg-black/35 px-2.5 py-1.5 sm:px-3 sm:py-2">
+                    <div className="absolute bottom-4 sm:bottom-6 left-1/2 z-1 flex -translate-x-1/2 items-center gap-2 sm:gap-3 rounded-full bg-black/35 px-2.5 py-1.5 sm:px-3 sm:py-2">
                         {slides.map((slide, slideIndex) => (
                             <button
                                 key={slideIndex}

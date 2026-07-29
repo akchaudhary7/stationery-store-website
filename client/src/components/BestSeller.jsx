@@ -11,7 +11,7 @@ const BestSeller = () => {
 
     useEffect(() => {
         const bestProduct = products.filter((item) => (item.bestSeller))
-        setBestSeller(products.slice(0, 4));
+        setBestSeller(products.slice(0, 6));
     }, [products])
 
 
@@ -27,15 +27,24 @@ const BestSeller = () => {
 
             {/* Rendering Products */}
 
-            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
-                {bestSeller.map((item) => (
-                    <Item
-                        key={item._id}
-                        id={item._id}
-                        image={item.image[0]}
-                        name={item.name}
-                        price={item.price}
-                    />
+            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 ak:grid-cols-5 lg:grid-cols-6 gap-4 gap-y-6'>
+                {bestSeller.map((item, index) => (
+
+                   <div
+                     key={item._id}
+                     className={index >= 4 ? 'hidden ak:block' : ''}
+                  >
+
+
+                        <Item
+                            key={item._id}
+                            id={item._id}
+                            image={item.image[0]}
+                            name={item.name}
+                            price={item.price}
+                            />
+                    
+                            </div>
                 ))}
             </div>
 
