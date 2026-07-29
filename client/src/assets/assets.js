@@ -13,6 +13,11 @@ import menu_icon from '../assets/menu_icon.png'
 import banner from '../assets/banner.avif'
 import banner2 from '../assets/banner2.jpg'
 import banner3 from '../assets/banner3.jpeg'
+import penbg from '../assets/penbg.jpeg'
+import pencilbg from '../assets/pencilbg.png'
+import colorsbg from '../assets/colorsbg.webp'
+import eraserbg from '../assets/eraserbg.jpeg'
+
 
 
 
@@ -31,7 +36,11 @@ export const assets = {
     menu_icon,
     banner,
     banner2,
-    banner3
+    banner3,
+    penbg,
+    pencilbg,
+    colorsbg,
+    eraserbg
 }
 
 export const products = [
@@ -39,11 +48,111 @@ export const products = [
         _id: "aaaaa",
         name: "Pen",
         price: 100,
-        image: [pens],
+        image: [penbg],
         category: "Writing",
         subCategory: "pen",
         date: "07182026",
-        bestseller: true
+        bestSeller: true
 
-    },{}
+    },
+    {
+        _id: "bbb",
+        name: "Pencil",
+        price: 10,
+        image: [pencilbg],
+        category: "Writing",
+        subCategory: 'pencil',
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "ccc",
+        name: "Eraser",
+        price: 10,
+        image: [eraserbg],
+        category: "Writing",
+        subCategory: 'pencil',
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "ddd",
+        name: "Sharpener",
+        price: 10,
+        image: [product1],
+        category: "Writing",
+        subCategory: 'pencil',
+        date: "07282026",
+        bestSeller: false
+    },
+    {
+        _id: "eee",
+        name: "Scale",
+        price: 10,
+        image: [ink_pen],
+        category: "Writing",
+        subCategory: 'pencil',
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "fff",
+        name: "Book",
+        price: 10,
+        image: [ink_pen1],
+        category: "Writing",
+        subCategory: 'pencil',
+        date: "07282026",
+        bestSeller: false
+    },
+    {
+        _id: "ggg",
+        name: "Protactor",
+        price: 10,
+        image: [pens],
+        category: "Writing",
+        subCategory: 'pencil',
+        date: "07282026",
+        bestSeller: false
+    },
+    {
+        _id: "hhh",
+        name: "Color",
+        price: 10,
+        image: [colorsbg],
+        category: "Writing",
+        subCategory: 'pencil',
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "iii",
+        name: "InkPen",
+        price: 10,
+        image: [ink_pen],
+        category: "Writing",
+        subCategory: 'pencil',
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "jjj",
+        name: "Brush",
+        price: 10,
+        image: [brush_kids],
+        category: "Writing",
+        subCategory: 'pencil',
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "kkk",
+        name: "Copy",
+        price: 10,
+        image: [brush_kids],
+        category: "Writing",
+        subCategory: 'pencil',
+        date: "07282026",
+        bestSeller: false
+    }
 ]

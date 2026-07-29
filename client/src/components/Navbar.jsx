@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <header className=''>
       <nav className='flex items-center justify-between px-2 md:px-6 ak:px-16 h-16 lg:gap-8'>
-        <NavLink to='/' className='text-xl md:text-2xl font-bold whitespace-nowrap'>Stationery Store</NavLink>
+        <Link to='/' className='text-xl md:text-2xl font-bold whitespace-nowrap'>Stationery Store</Link>
         <div className=''>
           <ul className='hidden ak:flex gap-6 text-lg items-center '>
             <NavLink to='/' className='hover:underline'>
