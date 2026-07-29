@@ -34,8 +34,6 @@ const BestSeller = () => {
                      key={item._id}
                      className={index >= 4 ? 'hidden ak:block' : ''}
                   >
-
-
                         <Item
                             key={item._id}
                             id={item._id}
@@ -43,12 +41,9 @@ const BestSeller = () => {
                             name={item.name}
                             price={item.price}
                             />
-                    
                             </div>
                 ))}
             </div>
-
-
         </div>
     )
 }

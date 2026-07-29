@@ -17,7 +17,7 @@ import penbg from '../assets/penbg.jpeg'
 import pencilbg from '../assets/pencilbg.png'
 import colorsbg from '../assets/colorsbg.webp'
 import eraserbg from '../assets/eraserbg.jpeg'
-
+import quality from '../assets/quality.png'
 
 
 
@@ -40,7 +40,8 @@ export const assets = {
     penbg,
     pencilbg,
     colorsbg,
-    eraserbg
+    eraserbg,
+    quality
 }
 
 export const products = [
