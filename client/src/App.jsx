@@ -12,11 +12,13 @@ import Product from './pages/Product'
 import Navbar from './components/Navbar'
 import PlaceOrder from './pages/PlaceOrder'
 import Footer from './components/Footer'
+import SearchBar from './components/SearchBar'
 
 const App = () => {
   return (
     <div>
     <Navbar/>
+    <SearchBar/>
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>} />
