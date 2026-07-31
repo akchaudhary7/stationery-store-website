@@ -13,8 +13,9 @@ const Item = ({ id, image, name, price }) => {
     };
 
     return (
-        <Link className='cursor-pointer' to={`/products/${id}`}>
-            <div className="w-full">
+        <div className="w-full">
+            <Link className='cursor-pointer' to={`/products/${id}`}>
+
                 {/* Product image box */}
 
                 <div className="aspect-square overflow-hidden rounded-2xl border border-gray-200 bg-white">
@@ -34,23 +35,24 @@ const Item = ({ id, image, name, price }) => {
                 <p className="mt-3  text-[19px] font-bold text-[rgb(219,68,68)]  ">
                     {currency} {price}
                 </p>
+            </Link>
 
-                {/* Add-to-cart button */}
-                <button
-                    type="button"
-                    onClick={handleAddToCart}
-                    className="mt-3 flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-amber-200 to-amber-300 py-1 md:py-1 ak:py-1.5 text-[15px] ak:text-[19px] font-bold text-black transition hover:brightness-95 hover:scale-110 transition ease-in-out"
-                >
-                    {/* Cart icon */}
-                    <IoCartOutline className='' />
 
-                    {/* Button text */}
-                    Add To Cart
-                </button>
+            {/* Add-to-cart button */}
+            <button
+                type="button"
+                onClick={handleAddToCart}
+                className="mt-3 flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-amber-200 to-amber-300 py-1 md:py-1 ak:py-1.5 text-[15px] ak:text-[19px] font-bold text-black transition hover:brightness-95 hover:scale-110 transition ease-in-out"
+            >
+                {/* Cart icon */}
+                <IoCartOutline className='' />
 
-            </div>
+                {/* Button text */}
+                Add To Cart
+            </button>
 
-        </Link>
+        </div>
+
 
     )
 }
