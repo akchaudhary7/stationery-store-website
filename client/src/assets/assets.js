@@ -46,12 +46,11 @@ export const assets = {
 
 export const products = [
     {
-        _id: "aaaaa",
+        _id: "aaa",
         name: "Pen",
         price: 100,
         image: [penbg],
-        category: "Writing",
-        subCategory: "pen",
+        category: "Writing Materials",
         date: "07182026",
         bestSeller: true
 
@@ -61,8 +60,7 @@ export const products = [
         name: "Pencil",
         price: 10,
         image: [pencilbg],
-        category: "Writing",
-        subCategory: 'pencil',
+        category: "Writing Materials",
         date: "07282026",
         bestSeller: true
     },
@@ -71,8 +69,7 @@ export const products = [
         name: "Eraser",
         price: 10,
         image: [eraserbg],
-        category: "Writing",
-        subCategory: 'pencil',
+        category: "Writing Materials",
         date: "07282026",
         bestSeller: true
     },
@@ -81,8 +78,7 @@ export const products = [
         name: "Sharpener",
         price: 10,
         image: [product1],
-        category: "Writing",
-        subCategory: 'pencil',
+        category: "Writing Materials",
         date: "07282026",
         bestSeller: true
     },
@@ -91,8 +87,7 @@ export const products = [
         name: "Scale",
         price: 10,
         image: [ink_pen],
-        category: "Writing",
-        subCategory: 'pencil',
+        category: "School Items",
         date: "07282026",
         bestSeller: true
     },
@@ -101,8 +96,7 @@ export const products = [
         name: "Book",
         price: 10,
         image: [ink_pen1],
-        category: "Writing",
-        subCategory: 'pencil',
+        category: "Books",
         date: "07282026",
         bestSeller: false
     },
@@ -111,8 +105,7 @@ export const products = [
         name: "Protactor",
         price: 10,
         image: [pens],
-        category: "Writing",
-        subCategory: 'pencil',
+        category: "School Items",
         date: "07282026",
         bestSeller: false
     },
@@ -121,8 +114,7 @@ export const products = [
         name: "Color",
         price: 10,
         image: [colorsbg],
-        category: "Writing",
-        subCategory: 'pencil',
+        category: "Writing Materials",
         date: "07282026",
         bestSeller: true
     },
@@ -131,8 +123,7 @@ export const products = [
         name: "InkPen",
         price: 10,
         image: [ink_pen],
-        category: "Writing",
-        subCategory: 'pencil',
+        category: "Writing Materials",
         date: "07282026",
         bestSeller: true
     },
@@ -141,8 +132,7 @@ export const products = [
         name: "Brush",
         price: 10,
         image: [brush_kids],
-        category: "Writing",
-        subCategory: 'pencil',
+        category: "Writing Materials",
         date: "07282026",
         bestSeller: true
     },
@@ -151,20 +141,317 @@ export const products = [
         name: "Copy",
         price: 10,
         image: [brush_kids],
-        category: "Writing",
-        subCategory: 'pencil',
+        category: "Notebooks",
         date: "07282026",
         bestSeller: false
     },
     {
-        _id: "aaaaa",
+        _id: "aaa1",
         name: "Pen",
         price: 100,
         image: [penbg],
-        category: "Writing",
-        subCategory: "pen",
+        category: "Writing Materials",
+        date: "07182026",
+        bestSeller: true
+    },
+    {
+        _id: "aaa2",
+        name: "Harry Poter",
+        price: 100,
+        image: [logo1],
+        category: "Nobels",
+        date: "07182026",
+        bestSeller: true
+    },
+    {
+        _id: "aaa3",
+        name: "Paper",
+        price: 100,
+        image: [logo1],
+        category: "Office Items",
+        date: "07182026",
+        bestSeller: true
+    },
+     {
+        _id: "aaa4",
+        name: "Study Table",
+        price: 100,
+        image: [logo1],
+        category: "Accessories",
+        date: "07182026",
+        bestSeller: true
+    },
+    {
+        _id: "aaa",
+        name: "Pen",
+        price: 100,
+        image: [penbg],
+        category: "Writing Materials",
         date: "07182026",
         bestSeller: true
 
     },
+    {
+        _id: "bbb",
+        name: "Pencil",
+        price: 20,
+        image: [pencilbg],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "ccc",
+        name: "Eraser",
+        price: 10,
+        image: [eraserbg],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "ddd",
+        name: "Sharpener",
+        price: 10,
+        image: [product1],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "eee",
+        name: "Scale",
+        price: 10,
+        image: [ink_pen],
+        category: "School Items",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "fff",
+        name: "Book",
+        price: 540,
+        image: [ink_pen1],
+        category: "Books",
+        date: "07282026",
+        bestSeller: false
+    },
+    {
+        _id: "ggg",
+        name: "Protactor",
+        price: 10,
+        image: [pens],
+        category: "School Items",
+        date: "07282026",
+        bestSeller: false
+    },
+    {
+        _id: "hhh",
+        name: "Color",
+        price: 120,
+        image: [colorsbg],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "iii",
+        name: "InkPen",
+        price: 110,
+        image: [ink_pen],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "jjj",
+        name: "Brush",
+        price: 130,
+        image: [brush_kids],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "kkk",
+        name: "Copy",
+        price: 50,
+        image: [brush_kids],
+        category: "Notebooks",
+        date: "07282026",
+        bestSeller: false
+    },
+    {
+        _id: "aaa1",
+        name: "Pen",
+        price: 100,
+        image: [penbg],
+        category: "Writing Materials",
+        date: "07182026",
+        bestSeller: true
+    },
+    {
+        _id: "aaa2",
+        name: "Harry Poter",
+        price: 300,
+        image: [logo1],
+        category: "Nobels",
+        date: "07182026",
+        bestSeller: true
+    },
+    {
+        _id: "aaa3",
+        name: "Paper",
+        price: 400,
+        image: [logo1],
+        category: "Office Items",
+        date: "07182026",
+        bestSeller: true
+    },
+     {
+        _id: "aaa4",
+        name: "Study Table",
+        price: 800,
+        image: [logo1],
+        category: "Accessories",
+        date: "07182026",
+        bestSeller: true
+    },
+    {
+        _id: "aaa",
+        name: "Pen",
+        price: 100,
+        image: [penbg],
+        category: "Writing Materials",
+        date: "07182026",
+        bestSeller: true
+
+    },
+    {
+        _id: "bbb",
+        name: "Pencil",
+        price: 5,
+        image: [pencilbg],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "ccc",
+        name: "Eraser",
+        price: 5,
+        image: [eraserbg],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "ddd",
+        name: "Sharpener",
+        price: 5,
+        image: [product1],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "eee",
+        name: "Scale",
+        price: 10,
+        image: [logo1],
+        category: "School Items",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "fff",
+        name: "Book",
+        price: 1000,
+        image: [logo1],
+        category: "Books",
+        date: "07282026",
+        bestSeller: false
+    },
+    {
+        _id: "ggg",
+        name: "Protactor",
+        price: 10,
+        image: [pens],
+        category: "School Items",
+        date: "07282026",
+        bestSeller: false
+    },
+    {
+        _id: "hhh",
+        name: "Color",
+        price: 150,
+        image: [colorsbg],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "iii",
+        name: "InkPen",
+        price: 50,
+        image: [ink_pen],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "jjj",
+        name: "Brush",
+        price: 105,
+        image: [brush_kids],
+        category: "Writing Materials",
+        date: "07282026",
+        bestSeller: true
+    },
+    {
+        _id: "kkk",
+        name: "Copy",
+        price: 100,
+        image: [brush_kids],
+        category: "Notebooks",
+        date: "07282026",
+        bestSeller: false
+    },
+    {
+        _id: "aaa1",
+        name: "Pen",
+        price: 10,
+        image: [penbg],
+        category: "Writing Materials",
+        date: "07182026",
+        bestSeller: true
+    },
+    {
+        _id: "aaa2",
+        name: "Harry Poter",
+        price: 300,
+        image: [logo1],
+        category: "Nobels",
+        date: "07182026",
+        bestSeller: true
+    },
+    {
+        _id: "aaa3",
+        name: "Paper",
+        price: 400,
+        image: [logo1],
+        category: "Office Items",
+        date: "07182026",
+        bestSeller: true
+    },
+     {
+        _id: "aaa4",
+        name: "Study Table",
+        price: 800,
+        image: [logo1],
+        category: "Accessories",
+        date: "07182026",
+        bestSeller: true
+    },
+
 ]
