@@ -193,7 +193,7 @@ const Shop = () => {
                                 key={index}
                                 id={item._id}
                                 name={item.name}
-                                image={item.image}
+                                image={item.image[0]}
                                 price={item.price}
                             />
 

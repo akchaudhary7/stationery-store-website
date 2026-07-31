@@ -18,6 +18,8 @@ import pencilbg from '../assets/pencilbg.png'
 import colorsbg from '../assets/colorsbg.webp'
 import eraserbg from '../assets/eraserbg.jpeg'
 import quality from '../assets/quality.png'
+import star_icon from '../assets/star_icon.png'
+import star_dull_icon from '../assets/star_dull_icon.png'
 
 
 
@@ -41,7 +43,9 @@ export const assets = {
     pencilbg,
     colorsbg,
     eraserbg,
-    quality
+    quality,
+    star_icon,
+    star_dull_icon
 }
 
 export const products = [
@@ -49,8 +53,9 @@ export const products = [
         _id: "aaa",
         name: "Pen",
         price: 100,
-        image: [penbg],
+        image: [penbg, pencilbg, ink_pen, ink_pen1],
         category: "Writing Materials",
+        description: "Pen is very nice. khfa hkfhaf jhkfhaf hf jkhfa  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sint animi fugiat dolores culpa beatae neque necessitatibus autem nobis quia perspiciatis consectetur deserunt, modi tenetur rerum sequi repudiandae possimus?",
         date: "07182026",
         bestSeller: true
 
@@ -182,7 +187,7 @@ export const products = [
         bestSeller: true
     },
     {
-        _id: "aaa",
+        _id: "aaa5",
         name: "Pen",
         price: 100,
         image: [penbg],
@@ -194,7 +199,7 @@ export const products = [
     {
         _id: "bbb",
         name: "Pencil",
-        price: 20,
+        price: 10,
         image: [pencilbg],
         category: "Writing Materials",
         date: "07282026",
@@ -282,7 +287,7 @@ export const products = [
         bestSeller: false
     },
     {
-        _id: "aaa1",
+        _id: "aaa10",
         name: "Pen",
         price: 100,
         image: [penbg],
@@ -291,7 +296,7 @@ export const products = [
         bestSeller: true
     },
     {
-        _id: "aaa2",
+        _id: "aaa20",
         name: "Harry Poter",
         price: 300,
         image: [logo1],
@@ -300,7 +305,7 @@ export const products = [
         bestSeller: true
     },
     {
-        _id: "aaa3",
+        _id: "aaa30",
         name: "Paper",
         price: 400,
         image: [logo1],
@@ -309,7 +314,7 @@ export const products = [
         bestSeller: true
     },
      {
-        _id: "aaa4",
+        _id: "aaa40",
         name: "Study Table",
         price: 800,
         image: [logo1],
@@ -318,7 +323,7 @@ export const products = [
         bestSeller: true
     },
     {
-        _id: "aaa",
+        _id: "aaa50",
         name: "Pen",
         price: 100,
         image: [penbg],
@@ -418,7 +423,7 @@ export const products = [
         bestSeller: false
     },
     {
-        _id: "aaa1",
+        _id: "aaa100",
         name: "Pen",
         price: 10,
         image: [penbg],
@@ -427,7 +432,7 @@ export const products = [
         bestSeller: true
     },
     {
-        _id: "aaa2",
+        _id: "aaa200",
         name: "Harry Poter",
         price: 300,
         image: [logo1],
@@ -436,7 +441,7 @@ export const products = [
         bestSeller: true
     },
     {
-        _id: "aaa3",
+        _id: "aaa300",
         name: "Paper",
         price: 400,
         image: [logo1],
@@ -445,7 +450,7 @@ export const products = [
         bestSeller: true
     },
      {
-        _id: "aaa4",
+        _id: "aaa400",
         name: "Study Table",
         price: 800,
         image: [logo1],

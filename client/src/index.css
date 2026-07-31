@@ -42,3 +42,7 @@
 .animate-slide-fade {
   animation: slideFade 500ms ease-in-out;
 }
+
+::-webkit-scrollbar{
+  display: none;
+}
