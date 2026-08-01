@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useLocation } from 'react-router-dom'
 import { IoCartOutline } from "react-icons/io5";
 import { CiUser } from "react-icons/ci";
 import { IoMdMenu, IoIosArrowBack } from "react-icons/io";
@@ -12,7 +12,8 @@ const Navbar = () => {
 
     const [visible, setVisible] = useState(false);
 
-    const {showSearch ,setShowSearch} = useContext(ShopContext);
+    const { showSearch, setShowSearch, getCartCount, navigate } = useContext(ShopContext);
+    const location = useLocation();
 
     return (
         <header className=''>
@@ -41,8 +42,13 @@ const Navbar = () => {
                 </div>
 
                 <div className='flex items-center gap-6'>
-                    <button onClick={() => showSearch ? setShowSearch(false) : setShowSearch(true)}>
-                    <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+                    <button onClick={() => {
+                        setShowSearch(!showSearch);
+                        if (location.pathname !== '/shop') {
+                            navigate('/shop');
+                        }
+                    }}>
+                        <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
                     </button>
                     <div className='group relative'>
                         <CiUser className='size-5 cursor-pointer' />
@@ -57,7 +63,7 @@ const Navbar = () => {
                     </div>
                     <Link to='/cart' className='relative'>
                         <IoCartOutline className='size-5' />
-                        <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px] '>10</p>
+                        <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px] '>{getCartCount()}</p>
                     </Link>
                     {/* <i onClick={() => setVisible(true)} className='ak:hidden' class="fa-solid fa-bars cursor-pointer"></i> */}
                     {/* <img onClick={()=> setVisible(true)} className='ak:hidden w-5 cursor-pointer' src={assets.menu_icon} alt="" /> */}

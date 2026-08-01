@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 const Item = ({ id, image, name, price }) => {
 
-    const { currency } = useContext(ShopContext);
+    const { currency, addToCart } = useContext(ShopContext);
 
-    const handleAddToCart = () => {
-        console.log("Product added to cart");
-    };
+    // const handleAddToCart = () => {
+    //     console.log("Product added to cart");
+    // };
 
     return (
         <div className="w-full">
@@ -41,8 +41,8 @@ const Item = ({ id, image, name, price }) => {
             {/* Add-to-cart button */}
             <button
                 type="button"
-                onClick={handleAddToCart}
-                className="mt-3 flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-amber-200 to-amber-300 py-1 md:py-1 ak:py-1.5 text-[15px] ak:text-[19px] font-bold text-black transition hover:brightness-95 hover:scale-110 transition ease-in-out"
+                onClick={() => addToCart(id)}
+                className="mt-3 flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-amber-200 to-amber-300 py-1 md:py-1 ak:py-1.5 text-[15px] ak:text-[19px] font-bold text-black transition hover:brightness-95 hover:scale-110 transition ease-in-out cursor-pointer active:from-amber-300 active:to-amber-400"
             >
                 {/* Cart icon */}
                 <IoCartOutline className='' />
