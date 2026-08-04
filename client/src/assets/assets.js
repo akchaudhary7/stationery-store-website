@@ -21,6 +21,7 @@ import quality from '../assets/quality.png'
 import star_icon from '../assets/star_icon.png'
 import star_dull_icon from '../assets/star_dull_icon.png'
 import about_us from '../assets/about_us.png'
+import contact_img from '../assets/contact_img.png'
 
 
 
@@ -47,7 +48,8 @@ export const assets = {
     quality,
     star_icon,
     star_dull_icon,
-    about_us
+    about_us,
+    contact_img
 }
 
 export const products = [
