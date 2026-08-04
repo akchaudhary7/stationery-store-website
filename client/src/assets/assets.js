@@ -20,6 +20,7 @@ import eraserbg from '../assets/eraserbg.jpeg'
 import quality from '../assets/quality.png'
 import star_icon from '../assets/star_icon.png'
 import star_dull_icon from '../assets/star_dull_icon.png'
+import about_us from '../assets/about_us.png'
 
 
 
@@ -45,7 +46,8 @@ export const assets = {
     eraserbg,
     quality,
     star_icon,
-    star_dull_icon
+    star_dull_icon,
+    about_us
 }
 
 export const products = [
