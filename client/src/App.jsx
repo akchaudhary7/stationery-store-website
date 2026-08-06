@@ -1,5 +1,5 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { assets } from './assets/assets'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -14,9 +14,20 @@ import PlaceOrder from './pages/PlaceOrder'
 import Footer from './components/Footer'
 import SearchBar from './components/SearchBar'
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+  }, [pathname])
+
+  return null;
+}
+
 const App = () => {
   return (
     <div>
+      <ScrollToTop/>
     <Navbar/>
     <SearchBar/>
     <Routes>
