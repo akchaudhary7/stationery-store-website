@@ -12,18 +12,20 @@ const Cart = () => {
     const [cartData, setCartData] = useState([]);
 
     useEffect(() => {
-
-        const tempData = [];
-        for (const items in cartItems) {
-            if (cartItems[items] > 0) {
-                tempData.push({
-                    _id: items,
-                    quantity: cartItems[items]
-                })
+        if (products.length > 0) {
+            const tempData = [];
+            for (const items in cartItems) {
+                if (cartItems[items] > 0) {
+                    tempData.push({
+                        _id: items,
+                        quantity: cartItems[items]
+                    })
+                }
             }
+            setCartData(tempData);
         }
-        setCartData(tempData);
-    }, [cartItems])
+
+    }, [cartItems, products])
 
     return (
         <div className='max-w-7xl mx-auto px-10 pt-14'>
@@ -51,10 +53,12 @@ const Cart = () => {
                                 <input
                                     onChange={(e) => {
                                         const value = e.target.value;
-                                        updateQuantity(item._id, value === '' ? 0 : Number(value));
+                                        if (value === '') return;
+                                        updateQuantity(item._id, Number(value));
                                     }}
-                                    className='border border-gray-200 max-w-10 sm:max-w-20 px-1 sm:px-2 py-1' type="number"
-                                    min={1}
+                                    className='border border-gray-200 max-w-10 sm:max-w-20 px-1 sm:px-2 py-1'
+                                    type="number"
+                                    min={0}
                                     value={item.quantity} />
                                 <button onClick={() => updateQuantity(item._id, 0)} className='w-4 mr-4 sm:w-5 cursor-pointer'>
                                     <RiDeleteBinLine className='size-5.5' />
@@ -70,9 +74,9 @@ const Cart = () => {
                 <div className='w-full sm:w-[450px]'>
                     <CartTotal />
                     <div className='w-full text-end'>
-                        <button 
-                        onClick={() => navigate('/place-order')}
-                        className='bg-black text-white text-sm my-8 px-8 py-3 active:bg-gray-700'>PROCEED TO CHECKOUT</button>
+                        <button
+                            onClick={() => navigate('/place-order')}
+                            className='bg-black text-white text-sm my-8 px-8 py-3 active:bg-gray-700'>PROCEED TO CHECKOUT</button>
                     </div>
                 </div>
 

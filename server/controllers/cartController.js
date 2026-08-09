@@ -1,4 +1,4 @@
-import userModel from "../models/userModel"
+import userModel from "../models/userModel.js"
 
 
 //  add products to user cart
@@ -37,8 +37,8 @@ const updateCart = async (req, res) => {
 
     try {
 
-        const { userId, itemId, quantity } = req.body;
-        const quantity = Number(quantity);
+        const { userId, itemId } = req.body;
+        const quantity = Number(req.body.quantity);
 
         if (!userId || !itemId || !Number.isInteger(quantity) || quantity < 0) {
             return res.json({
