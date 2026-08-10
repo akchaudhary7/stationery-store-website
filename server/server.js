@@ -18,7 +18,7 @@ connectCloudinary();
 // middlewares
 app.use(express.json());
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:5173"], // replace with your frontend URL
+  origin: ["http://localhost:3000", "http://localhost:5173", "https://stationery-store-website-admin.vercel.app", "https://stationery-store-website-client.vercel.app"], // replace with your frontend URL
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "token", "Authorization"],
 }));
