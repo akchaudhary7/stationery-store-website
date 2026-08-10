@@ -3,10 +3,10 @@ import userModel from '../models/userModel.js';
 
 
 
-// const calculateOrderAmount = async(items) => {
-//     let totalAmount = 0;
-
-// }
+const calculateOrderAmount = async(items) => {
+    console.log(items);
+    
+}
 
 
 // Placing orders using COD Method
@@ -15,6 +15,9 @@ const placeOrder = async (req, res) => {
     try {
 
         const { userId, items, amount, address } = req.body;
+
+        const amount2 = await calculateOrderAmount(items);
+
 
         if (!items?.length || !address) {
             return res.status(400).json({

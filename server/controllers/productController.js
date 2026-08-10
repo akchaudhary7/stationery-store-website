@@ -24,8 +24,8 @@ const addProduct = async (req, res) => {
             })
         )
 
-        console.log(name, description, price, category, bestSeller);
-        console.log(imageUrl);
+        // console.log(name, description, price, category, bestSeller);
+        // console.log(imageUrl);
 
         const productData = {
             name,
@@ -37,7 +37,7 @@ const addProduct = async (req, res) => {
             date: Date.now()
         }
 
-        console.log(productData);
+        // console.log(productData);
 
         const product = new productModel(productData);
         await product.save()
@@ -103,7 +103,7 @@ const singleProduct = async (req, res) => {
         }
         const product = await productModel.findById(id);
 
-        console.log(product);
+        // console.log(product);
 
         res.json({ success: true, product })
 

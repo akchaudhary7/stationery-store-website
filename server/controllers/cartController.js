@@ -14,8 +14,7 @@ const addToCart = async (req, res) => {
         const user = await userModel.findByIdAndUpdate(
             userId,
             { $inc: { [`cartData.${itemId}`]: 1 } },
-            { new: true }
-        );
+            { returnDocument: 'after' });
 
         if (!user) {
             return res.json({ success: false, message: "User not found" });
@@ -57,7 +56,7 @@ const updateCart = async (req, res) => {
         const user = await userModel.findByIdAndUpdate(
             userId,
             updateQuery,
-            { new: true }
+            { returnDocument: 'after' }
         );
 
 
