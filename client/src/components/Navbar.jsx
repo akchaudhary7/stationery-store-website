@@ -4,7 +4,6 @@ import { IoCartOutline } from "react-icons/io5";
 import { CiUser } from "react-icons/ci";
 import { IoMdMenu, IoIosArrowBack } from "react-icons/io";
 import { BiMenuAltRight } from "react-icons/bi";
-
 import { assets } from '../assets/assets';
 import { ShopContext } from '../context/ShopContext';
 
@@ -34,6 +33,10 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink to='/shop' className='hover:underline'>
                             <p> Shop </p>
+                            {/* <hr className='underline hidden' /> */}
+                        </NavLink>
+                        <NavLink to='/orders' className='hover:underline'>
+                            <p> My Orders </p>
                             {/* <hr className='underline hidden' /> */}
                         </NavLink>
                         <NavLink to='/about' className='hover:underline'>
@@ -97,6 +100,7 @@ const Navbar = () => {
                         </div>
                         <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/'>Home</NavLink>
                         <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/shop'>Shop</NavLink>
+                        <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/orders'>My Orders</NavLink>
                         <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/about'>About</NavLink>
                         <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/contact'>Contact</NavLink>
                     </div>
