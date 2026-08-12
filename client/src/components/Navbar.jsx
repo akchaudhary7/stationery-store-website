@@ -61,13 +61,13 @@ const Navbar = () => {
                         <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
                     </button>
                     <div className='group relative'>
-                        <CiUser onClick={()=> token ? null : navigate('/login')} className='size-5 cursor-pointer' />
+                        <CiUser onClick={()=> token ? navigate('/profile') : navigate('/login')} className='size-5 cursor-pointer' />
 
                             {/* Dropdown Menu */}
                         {
                             token && <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4 z-2'>
                             <div className='flex flex-col  gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
-                                <p className='cursor-pointer hover:text-black'>My Profile</p>
+                                <p onClick={() => navigate('/profile')} className='cursor-pointer hover:text-black'>My Profile</p>
                                 <p onClick={()=> navigate('/orders')} className='cursor-pointer hover:text-black'>Orders</p>
                                 <p
                                     onClick={logout}

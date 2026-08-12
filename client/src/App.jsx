@@ -13,6 +13,7 @@ import PlaceOrder from './pages/PlaceOrder'
 import Footer from './components/Footer'
 import SearchBar from './components/SearchBar'
 import { ShopContext } from './context/ShopContext'
+import Profile from './pages/Profile'
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -46,6 +47,7 @@ const App = () => {
       <Route path='/login' element={<Login/>} />
       <Route path='/cart' element={<ProtectedRoute><Cart/></ProtectedRoute>} />
       <Route path='/orders' element={<ProtectedRoute><Orders/></ProtectedRoute>} />
+      <Route path='/profile' element={<ProtectedRoute><Profile/></ProtectedRoute>} />
       <Route path='/place-order' element={<ProtectedRoute><PlaceOrder/></ProtectedRoute>} />
     </Routes>
     <Footer/>
