@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { assets } from "../assets/assets";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 
@@ -15,10 +15,16 @@ const ShopContextProvider = (props) => {
     const [showSearch, setShowSearch] = useState(false);
     const [cartItems, setCartItems] = useState({});
     const [products, setProducts] = useState([]);
-    const [token, setToken] = useState('');
+    const [token, setToken] = useState(() => localStorage.getItem('token') || '');
     const navigate = useNavigate();
+    const location = useLocation();
 
     const addToCart = async (itemId) => {
+        if (!token) {
+            navigate('/login', { state: { from: location.pathname } });
+            return;
+        }
+
         let cartData = { ...cartItems };
 
         if (cartData[itemId]) {
@@ -29,14 +35,11 @@ const ShopContextProvider = (props) => {
 
         setCartItems(cartData);
 
-        if (token) {
-            try {
-                await axios.post(backendUrl + '/api/cart/add', { itemId }, { headers: { token } })
-            } catch (error) {
-                console.log(error);
-                toast.error(error.message)
-
-            }
+        try {
+            await axios.post(backendUrl + '/api/cart/add', { itemId }, { headers: { token } })
+        } catch (error) {
+            console.log(error);
+            toast.error(error.message)
         }
     };
 
@@ -120,9 +123,8 @@ const ShopContextProvider = (props) => {
     }, [])
 
     useEffect(() => {
-        if (!token && localStorage.getItem('token')) {
-            setToken(localStorage.getItem('token'))
-            getUserCart(localStorage.getItem('token'))
+        if (token) {
+            getUserCart(token)
         }
     }, [])
 

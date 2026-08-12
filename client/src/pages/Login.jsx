@@ -2,11 +2,13 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { useLocation } from 'react-router-dom';
 
 const Login = () => {
 
     const [currentState, setCurrentState] = useState('Login');
     const { token, setToken, navigate, backendUrl } = useContext(ShopContext);
+    const location = useLocation();
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -46,9 +48,9 @@ const Login = () => {
 
     useEffect(()=>{
         if (token) {
-            navigate('/')
+            navigate(location.state?.from || '/', { replace: true })
         }
-    }, [token, navigate])
+    }, [token, navigate, location.state])
 
     return (
         <form onSubmit={onSubmitHandler} className='flex flex-col items-center w-[90%] sm:max-w-96 m-auto mt-14 gap-4 text-gray-800'>
